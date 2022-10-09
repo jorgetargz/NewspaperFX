@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="700.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="gui.screens.subscriptions_list.SubscriptionListController">
+    <Label fx:id="title" layoutX="89.0" layoutY="35.0" prefHeight="82.0" prefWidth="801.0" styleClass="title"/>
+    <TableView fx:id="tableSubscriptions" layoutX="151.0" layoutY="227.0" prefHeight="342.0" prefWidth="677.0">
+        <columns>
+            <TableColumn fx:id="columnId" prefWidth="104.0" text="ID"/>
+            <TableColumn fx:id="columnIdReader" prefWidth="208.79998779296875" text="ID Reader"/>
+            <TableColumn fx:id="columnIdNewspaper" prefWidth="208.79998779296875" text="ID Newspaper"/>
+            <TableColumn fx:id="columnSigningDate" prefWidth="177.60003662109375" text="Signing Date"/>
+            <TableColumn fx:id="columnCancellationDate" prefWidth="177.60003662109375" text="Cancellation Date"/>
+        </columns>
+    </TableView>
+    <MFXComboBox fx:id="cbNewspapers" layoutX="324.0" layoutY="147.0" prefHeight="55.0" prefWidth="179.0"/>
+    <Label layoutX="324.0" layoutY="124.0" text="Choose a newspaper:"/>
+    <MFXButton fx:id="btnFilter" buttonType="RAISED" layoutX="553.0" layoutY="148.0" onAction="#filter"
+               prefHeight="55.0" prefWidth="102.0" text="Filtrar"/>
+</AnchorPane>
